@@ -42,14 +42,11 @@ int main() {
 
     for (int i = 0; str[i] != '\0'; i++) {
         if (str[i] == '(') {
-           
             push(&stack, str[i]);
         } else if (str[i] == ')') {
-            
             if (stack != NULL) {
                 pop(&stack);
             } else {
-                
                 kurang_buka++;
             }
         }
@@ -62,7 +59,6 @@ int main() {
         pop(&stack); 
     }
 
-    
     int kurung_total = kurang_buka + kurang_tutup;
     printf("%d\n", kurung_total);
 
